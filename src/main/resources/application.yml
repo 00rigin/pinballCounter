@@ -1,0 +1,23 @@
+server:
+  port: 8090
+
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: false
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        default_batch_fetch_size: 100
+
+  datasource:
+    url: jdbc:mysql://avnadmin:AVNS_50jRXNiPOKxigNDkiDz@pinball-counter-mysql-pinballcounter-9032.a.aivencloud.com:25603/defaultdb?ssl-mode=REQUIRED
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: avnadmin
+    password: AVNS_50jRXNiPOKxigNDkiDz
+    hikari:
+      maximum-pool-size: 2
+      minimum-idle: 2
+
